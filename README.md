@@ -15,6 +15,8 @@ Here are some refinement results on high-resolution images:
 
 ## Getting Started
 Note: The code has been tested on Ubuntu 18.04.6 LTS Bionic 
+Note: Python 3.8 has been used for all experiments.
+Note: PyTorch-GPU v1.10.2 or above has been used for all experiments.
 
 Folder structure:
 
@@ -31,3 +33,27 @@ Folder structure:
     
 Inside "src" folder, you will find source files for three datasets:
 (a) deepglobe (b) DUTS (c) kvasir
+
+Install requirements with
+```bash
+pip install -r requirements.txt
+```
+
+Download trained model weights for all datasets with
+```bash
+python download.py
+```
+Note: gdown has been used to download the model weights. 
+If gdown gives this error:  Cannot retrieve the public link of the file. You may need to change the permission to 'Anyone with the link', or have had many accesses. Then reinstall gdown with this command:
+
+```bash
+pip install --upgrade --no-cache-dir gdown
+```
+
+In case download.py gives error while downloading, here are the Google Drive links for model files:
+
+| Dataset | Model Weights |
+| --- | --- |
+| deepglobe | [download model weights](https://drive.google.com/file/d/1taCeROWb_bYMvfcCDtC2ftv_QfsWqmou/view?usp=sharing) |
+| DUTS | [download model weights](https://drive.google.com/file/d/1Viu_mTI3aCvOKDLw8RRnMYFWvLZeBXqO/view?usp=sharing) |
+| kvasir | [download model weights](https://drive.google.com/file/d/1Gj8Y43w5to-CdukJ0NlPzhrcUgvTNEa1/view?usp=share_link) |
