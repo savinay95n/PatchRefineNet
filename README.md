@@ -12,3 +12,19 @@ The purpose of binary segmentation models is to determine which pixels belong to
 
 Here are some refinement results on high-resolution images:
 ![arch](images/result.png)
+
+## Getting Started
+Note: The code has been tested on Ubuntu 18.04.6 LTS Bionic 
+
+Folder structure:
+PatchRefineNet
+        |__images
+		    |__data_utils
+			  |__src
+			  |__.gitignore
+			  |__download.py
+			  |__LICENSE
+			  |__README
+			  |__requirements.txt
+		Inside "src" folder, you will find source files for three datasets:
+		(a) deepglobe (b) DUTS (c) kvasir
