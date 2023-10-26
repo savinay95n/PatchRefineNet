@@ -17,14 +17,15 @@ Here are some refinement results on high-resolution images:
 Note: The code has been tested on Ubuntu 18.04.6 LTS Bionic 
 
 Folder structure:
- PatchRefineNet
-    ├── images
-    ├── data_utils                   
-    ├── src                    
-    ├── download.py                     
-    ├── requirements.txt                    
-    ├── LICENSE
-    └── README.md
+
+ .
+ ├── images
+ ├── data_utils                   
+ ├── src                    
+ ├── download.py                     
+ ├── requirements.txt                    
+ ├── LICENSE
+ └── README.md
     
 Inside "src" folder, you will find source files for three datasets:
 (a) deepglobe (b) DUTS (c) kvasir
