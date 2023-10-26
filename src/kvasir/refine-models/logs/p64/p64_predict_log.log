@@ -1,0 +1,7 @@
+INFO:root:==========================================================================================
+INFO:root:Predicting p64 aux model on kvasir dataset trained on base model resunetplusplus
+INFO:root:==========================================================================================
+INFO:root:Loading Saved Checkpoint ...
+INFO:root:=================================================================
+INFO:root:Total mIoU after Refinement = 0.623687
+

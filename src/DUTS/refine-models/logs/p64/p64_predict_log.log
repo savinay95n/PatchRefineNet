@@ -1,0 +1,6 @@
+INFO:root:==========================================================================================
+INFO:root:Predicting p64 aux model on DUTS dataset trained on base model pfanet
+INFO:root:==========================================================================================
+INFO:root:Loading Saved Checkpoint ...
+INFO:root:=================================================================
+INFO:root:Total mIoU after Refinement = 0.701746

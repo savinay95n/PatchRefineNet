@@ -1,0 +1,4 @@
+INFO:root:========================================================
+INFO:root:Calculating mIoU of pfanet model on DUTS dataset
+INFO:root:========================================================
+INFO:root:Base Test mIoU before Refinement = 0.663530

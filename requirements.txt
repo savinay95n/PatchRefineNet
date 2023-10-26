@@ -1,0 +1,13 @@
+# Download PyTorch-GPU 1.0 or higher from PyTorch website.
+gdown
+zipfile38
+opencv-python
+numpy
+torchmetrics
+scikit-learn
+pandas
+torchsummary
+scikit-image
+tensorboard
+matplotlib
+scikit-image

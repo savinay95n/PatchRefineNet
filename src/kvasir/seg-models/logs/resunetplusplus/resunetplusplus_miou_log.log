@@ -1,0 +1,5 @@
+INFO:root:========================================================
+INFO:root:Calculating Test mIoU of resunet++ model on kvasir dataset
+INFO:root:========================================================
+INFO:root:Base Test mIoU before Refinement = 0.561821
+
