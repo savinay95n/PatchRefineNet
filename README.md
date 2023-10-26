@@ -129,4 +129,24 @@ Kvasir-SEG dataset:
         python src/kvasir/refine-models/predict.py --base_model resunetplusplus --aux_model p64 --checkpoint True
    ```
    This will write the mIoU to the file p64_predict_log.log under src/kvasir/refine-models/logs/p64 folder.
-   
+
+## Credit
+If you find our work useful in your research, please cite the following:
+
+```bibtex
+@misc{nagendra2023patchrefinenet,
+      title={PatchRefineNet: Improving Binary Segmentation by Incorporating Signals from Optimal Patch-wise Binarization}, 
+      author={Savinay Nagendra and Chaopeng Shen and Daniel Kifer},
+      year={2023},
+      eprint={2211.06560},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
+@article{nagendra2022threshnet,
+  title={ThreshNet: Segmentation Refinement Inspired by Region-Specific Thresholding},
+  author={Nagendra, Savinay and Shen, Chaopeng and Kifer, Daniel},
+  journal={arXiv preprint arXiv:2211.06560},
+  year={2022}
+}
+```
