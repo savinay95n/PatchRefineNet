@@ -18,6 +18,7 @@ Note: The code has been tested on Ubuntu 18.04.6 LTS Bionic
 
 Folder structure:
 
+```bash
  .
  ├── images
  ├── data_utils                   
@@ -26,6 +27,7 @@ Folder structure:
  ├── requirements.txt                    
  ├── LICENSE
  └── README.md
+```
     
 Inside "src" folder, you will find source files for three datasets:
 (a) deepglobe (b) DUTS (c) kvasir
