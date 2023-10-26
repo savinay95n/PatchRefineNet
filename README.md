@@ -21,10 +21,10 @@ Note: PyTorch-GPU v1.10.2 or above has been used for all experiments.
 Folder structure:
 
 ```bash
- .
+ PatchRefineNet
  ├── images
  ├── data_utils                   
- ├── src                    
+ ├── **src**                    
  ├── download.py                     
  ├── requirements.txt                    
  ├── LICENSE
@@ -57,3 +57,76 @@ In case download.py gives error while downloading, here are the Google Drive lin
 | deepglobe | [download model weights](https://drive.google.com/file/d/1taCeROWb_bYMvfcCDtC2ftv_QfsWqmou/view?usp=sharing) |
 | DUTS | [download model weights](https://drive.google.com/file/d/1Viu_mTI3aCvOKDLw8RRnMYFWvLZeBXqO/view?usp=sharing) |
 | kvasir | [download model weights](https://drive.google.com/file/d/1Gj8Y43w5to-CdukJ0NlPzhrcUgvTNEa1/view?usp=share_link) |
+
+After downloading and unzipping, you will find two model files inside each folder.
+- deepglobe: 
+     - **dlinknet_weights.th** has to be put in src/deepglobe/seg-models/checkpoints/dlinknet
+     - **p64_weights.th** has to be put in src/deepglobe/refine-models/checkpoints/p64
+       
+- DUTS: 
+     - **best-model_epoch-204_mae-0.0505_loss-0.1370.pth** has to be put in src/DUTS/seg-models/checkpoints/pfanet
+     - **p64_weights.th** has to be put in src/DUTS/refine-models/checkpoints/p64
+
+- kvasir: 
+     - **resunetplusplus_weights.th** has to be put in src/kvasir/seg-models/checkpoints/resunetplusplus
+     - **p64_weights.th** has to be put in src/kvasir/refine-models/checkpoints/p64
+ 
+Download data manually from Google Drive Link (6.7 GB):
+Download data using this link: [download data](https://drive.google.com/file/d/1s3ygbL-sd_WkSn-SB2IY-hFeWXuQqVeD/view?usp=sharing)
+
+Note: Downloading and Unzipping a big file with python using gdown and Zipfile could result in errors. That is why, it is preferred to download this data manually.
+
+Unzip data.zip to "data" folder inside PatchRefineNet. After this step, the structure of PatchRefineNet should look like this:
+
+```bash
+ PatchRefineNet
+ ├── **data**
+ ├── images
+ ├── data_utils                   
+ ├── src                    
+ ├── download.py                     
+ ├── requirements.txt                    
+ ├── LICENSE
+ └── README.md
+```
+
+Inference:
+
+DeepGlobe dataset:
+1. Base network D-LinkNet on DeepGlobe test dataset:
+ ```bash
+       python src/deepglobe/seg-models/calculate_base_iou.py --model dlinknet
+   ```
+       This will write the mIoU to the file dlinknet_miou_log.log under src/deepglobe/seg-models/logs/dlinknet folder.
+2. PRN (P=64)on DeepGlobe test dataset:
+```bash
+        python src/deepglobe/refine-models/predict.py --base_model dlinknet --aux_model p64 --checkpoint True
+```
+This will write the mIoU to the file p64_predict_log.log under src/deepglobe/refine-models/logs/p64 folder.
+
+DUTS dataset:
+1. To run inference on base network PFANet on DUTS Saliency Detection test dataset:
+   ```bash
+       python src/DUTS/seg-models/calculate_base_iou.py --model pfanet
+   ```
+   This will write the mIoU to the file pfanet_miou_log.log under src/DUTS/seg-models/logs/pfanet folder.
+   
+3. To run inference on PRN (P=64)on DUTS Saliency Detection test dataset:
+   ```bash
+        python src/DUTS/refine-models/predict.py --base_model pfanet --aux_model p64 --checkpoint True
+   ```
+   This will write the mIoU to the file p64_predict_log.log under src/DUTS/refine-models/logs/p64 folder.
+   
+Kvasir-SEG dataset:
+1. To run inference on base network ResUnet++ on Kvasir-SEG test dataset:
+   ```bash
+       python src/kvasir/seg-models/calculate_base_iou.py --model resunetplusplus
+   ```
+   This will write the mIoU to the file resunetplusplus_miou_log.log under src/kvasir/seg-models/logs/resunetplusplus folder.
+   
+3. To run inference on PRN (P=64)on Kvasir-SEG test dataset:
+   ```bash
+        python src/kvasir/refine-models/predict.py --base_model resunetplusplus --aux_model p64 --checkpoint True
+   ```
+   This will write the mIoU to the file p64_predict_log.log under src/kvasir/refine-models/logs/p64 folder.
+   
