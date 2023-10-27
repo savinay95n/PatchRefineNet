@@ -2,6 +2,7 @@
 **Authors**: [Savinay Nagendra](https://github.com/savinay95n), [Daniel Kifer](https://github.com/dkifer), [Chaopeng Shen](https://github.com/chaopengshen)
 
 **Links**: [[arXiv]](https://arxiv.org/abs/2211.06560) [[PDF]](https://arxiv.org/pdf/2211.06560.pdf)
+**This paper has been accepted to [WACV 2024](https://wacv2024.thecvf.com/)**
 
 ![animation](images/animation.gif)
 
