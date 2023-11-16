@@ -12,6 +12,8 @@
 
 - 2023/10/25 This paper has been accepted to [WACV 2024](https://wacv2024.thecvf.com/)
 
+## Overview
+
 ![animation](images/animation.gif)
 
 # Introduction
