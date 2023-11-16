@@ -3,6 +3,11 @@
 
 **Links**: [[arXiv]](https://arxiv.org/abs/2211.06560) [[PDF]](https://arxiv.org/pdf/2211.06560.pdf)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/threshnet-segmentation-refinement-inspired-by/road-segementation-on-deepglobe)](https://paperswithcode.com/sota/road-segementation-on-deepglobe?p=threshnet-segmentation-refinement-inspired-by)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/threshnet-segmentation-refinement-inspired-by/saliency-detection-on-duts-test)](https://paperswithcode.com/sota/saliency-detection-on-duts-test?p=threshnet-segmentation-refinement-inspired-by)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/threshnet-segmentation-refinement-inspired-by/few-shot-semantic-segmentation-on-fss-1000-5)](https://paperswithcode.com/sota/few-shot-semantic-segmentation-on-fss-1000-5?p=threshnet-segmentation-refinement-inspired-by)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/threshnet-segmentation-refinement-inspired-by/polyp-segmentation-on-kvasir-seg)](https://paperswithcode.com/sota/polyp-segmentation-on-kvasir-seg?p=threshnet-segmentation-refinement-inspired-by)
+
 ## News
 
 - 2023/10/25 This paper has been accepted to [WACV 2024](https://wacv2024.thecvf.com/)
